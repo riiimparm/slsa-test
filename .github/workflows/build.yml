@@ -1,20 +1,19 @@
-
 name: build-and-attest
 
 on:
   push:
-    branches: [main]
+    tags:
+      - '**'
   workflow_dispatch:
 
 permissions:
   contents: read
 
-
 jobs:
- build:
-   permissions:
-     contents: read
-     id-token: write
-     attestations: write
-     artifact-metadata: write
-   uses: ./.github/workflows/reusable-build.yml
+  build:
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+      artifact-metadata: write
+    uses: ./.github/workflows/reusable-build.yml
