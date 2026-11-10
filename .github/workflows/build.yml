@@ -16,4 +16,4 @@ jobs:
       id-token: write
       attestations: write
       artifact-metadata: write
-    uses: ./.github/workflows/reusable-build.yml
+    uses: riiimparm/slsa-test-reusable/.github/workflows/reusable-build.yml@fce2a39
